@@ -1,0 +1,10 @@
+.box{
+    background-color: rgb(115, 231, 193); 
+}
+
+.row{
+justify-content: center;
+justify-items: center;
+padding-top: 10%;
+}
+

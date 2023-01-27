@@ -19,9 +19,9 @@ const Calendar: React.FC = () => {
   const weekendLastDate = datefns.lastDayOfWeek(lastDay);
 
   const tooglePopUp = (date: Date) => {
-    
+    let dte = datefns.format(date, 'dd-MM-yyyy')
     setPopUp(true);
-    setDate(date)
+    setDate(dte)
   }
 
   const hidePopUp = () => {
@@ -71,10 +71,10 @@ const Calendar: React.FC = () => {
                 <span>{datefns.format(week, formatOfWeek)}</span>
               ))}
 
-              {totalDates.map((date) => {
+              {totalDates.map((date, dte) => {
 
                 return (
-                  <span style={{
+                  <span key={dte} style={{
                     color:
                       !datefns.isSameMonth(date, currentDate) ? "#ddd" :
                       isToday(date) ? "green" :

@@ -19,7 +19,6 @@ const Popup = (props:Props) => {
 }
 
 export default Popup;
-
 interface Props{
     hidePopUp:()=>void
     date: Date;
